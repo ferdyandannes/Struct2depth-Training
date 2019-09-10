@@ -1,0 +1,35 @@
+python3 inference.py --logtostderr --file_extension png --depth --egomotion true --input_dir="/media/ferdyan/NewDisk/Dataset/Tes" --output_dir="/media/ferdyan/NewDisk/struct2depth/hasil" --model_ckpt="/media/ferdyan/NewDisk/struct2depth/ckpt/model-199160"
+
+
+python3 inference.py --logtostderr --file_extension png --depth --egomotion true --input_dir="/media/ferdyan/NewDisk/Dataset/Tes" --output_dir="/media/ferdyan/NewDisk/struct2depth/hasil" --model_ckpt="/media/ferdyan/NewDisk/struct2depthv2/ckpt/model-199160"
+
+
+python3 train.py --logtostderr --checkpoint_dir="/media/ferdyan/NewDisk/struct2depth/check" --data_dir="/media/ferdyan/NewDisk/Dataset/KITTI_procesed" --architecture resnet --imagenet_ckpt="/media/ferdyan/NewDisk/struct2depth/ckpt/model.ckpt" --imagenet_norm true --joint_encoder="false" --batch_size="1" --summary_freq="100"
+
+
+
+
+
+
+python3 train.py --logtostderr --checkpoint_dir="/media/ferdyan/NewDisk/struct2depth/check" --data_dir="/media/ferdyan/NewDisk/Dataset/kitti_one_obj/" --architecture resnet --imagenet_ckpt="/media/ferdyan/NewDisk/struct2depth/ckpt/model.ckpt" --imagenet_norm true --joint_encoder="false" --batch_size="1" --summary_freq="100"
+
+
+
+
+
+python3 train.py --logtostderr --checkpoint_dir="/media/ferdyan/NewDisk/struct2depth/check" --data_dir="/media/ferdyan/NewDisk/Dataset/KITTI_procesed/" --architecture resnet --imagenet_ckpt="/media/ferdyan/NewDisk/struct2depth/ckpt/model.ckpt" --imagenet_norm true --joint_encoder="false" --batch_size="1" --summary_freq="100" --size_constraint_weight=0
+
+
+####### FIX
+
+python3 train.py --logtostderr --checkpoint_dir="/media/ferdyan/NewDisk/struct2depth/check" --data_dir="/media/ferdyan/NewDisk/Mask/Siap_procesed/" --architecture resnet --imagenet_ckpt="/media/ferdyan/NewDisk/struct2depth/ckpt/model.ckpt" --imagenet_norm true --joint_encoder="false" --batch_size="1" --summary_freq="100" --size_constraint_weight=0
+
+python3 train.py --logtostderr --checkpoint_dir="/media/ferdyan/NewDisk/struct2depth/check" --data_dir="/media/ferdyan/NewDisk/Dataset/kitti_one_obj/" --architecture resnet --imagenet_ckpt="/media/ferdyan/NewDisk/struct2depth/ckpt/model.ckpt" --imagenet_norm true --joint_encoder="false" --batch_size="1" --summary_freq="100" --size_constraint_weight=0
+
+
+INFERENCE BIG IMAGE
+python3 inference.py --logtostderr --file_extension png --depth --egomotion true --input_dir="/media/ferdyan/NewDisk/3d_bounding_box/tes/training/image_2" --output_dir="/media/ferdyan/NewDisk/struct2depth/hasil" --model_ckpt="/media/ferdyan/NewDisk/struct2depth/ckpt/model-199160"
+
+python3 inference.py --logtostderr --file_extension png --depth --egomotion true --input_dir="/media/ferdyan/NewDisk/Trajectory_Final/dataset/ooc8/Images" --output_dir="/media/ferdyan/NewDisk/struct2depth/hasil" --model_ckpt="/media/ferdyan/NewDisk/struct2depth/ckpt/model-199160"
+
+
